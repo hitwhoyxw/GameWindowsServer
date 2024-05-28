@@ -1,0 +1,17 @@
+syntax = "proto3"; 
+package mytest;
+message PlayerTransformMsg {
+    Vec3 worldPos=1;
+    Vec3 rotate=2;
+    Vec3 scale=3;
+}
+
+message Vec3{
+    float x=1;
+    float y=2;
+    float z=3;
+}
+message NetPlayerTransformMsg{
+    PlayerTransformMsg playerTransformMsg=1;
+    string token=2;
+}
